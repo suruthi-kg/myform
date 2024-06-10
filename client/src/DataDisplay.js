@@ -18,7 +18,7 @@ function DataDisplay() {
   const fetchData = async () => {
     //  setIsLoading(true);
     try {
-      const response = await axios.get("http://localhost:8000/show");
+      const response = await axios.get("https://myform-1.onrender.com/show");
       setData(response.data);
     }
     catch (error) {
@@ -32,7 +32,7 @@ function DataDisplay() {
     console.log("hello");
     try {
       // Make an HTTP request to delete the item with the given ID
-      const response = await axios.delete(`http://localhost:8000/delete/${itemId}`);
+      const response = await axios.delete(`https://myform-1.onrender.com/delete/${itemId}`);
       console.log(response.data.message);
       console.log("del try");
       // Update the UI by removing the deleted ++++ from the data array
@@ -81,7 +81,7 @@ function DataDisplay() {
   const handleSave = async () => {
     console.log(editedData, "hrrr")
     try {
-      await axios.put(`http://localhost:8000/edit/${editedData._id}`, editedData); // Replace with your API endpoint
+      await axios.put(`https://myform-1.onrender.com/edit/${editedData._id}`, editedData); // Replace with your API endpoint
       setEditMode(false);
       // Optionally, you can refetch the data to display the updated version
       fetchData();

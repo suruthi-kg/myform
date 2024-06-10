@@ -34,7 +34,7 @@ const App = () => {
       name: data.name,
       password: data.password
     };
-    axios.post("http://localhost:8000/message", userData)
+    axios.post("https://myform-1.onrender.com/message", userData)
       .then((response) => {
         console.log(response.status, response.data.token);
         console.log("success");
@@ -47,7 +47,7 @@ const App = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/delete"); // Replace with your data fetching route
+      const response = await axios.get("https://myform-1.onrender.com/delete"); // Replace with your data fetching route
       setData(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);

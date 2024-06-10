@@ -12,7 +12,7 @@ function Edit() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/edit'); // Replace with your API endpoint
+      const response = await axios.get('https://myform-1.onrender.com/edit'); // Replace with your API endpoint
       setData(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -26,7 +26,7 @@ function Edit() {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:8000/edit/${editedData._id}`, editedData); // Replace with your API endpoint
+      await axios.put(`https://myform-1.onrender.com/edit/${editedData._id}`, editedData); // Replace with your API endpoint
       setEditMode(false);
       fetchData(); // Refresh data after edit
     } catch (error) {
